@@ -9,33 +9,58 @@
 
 <url>
   <loc>https://www.jamiljahan.com/</loc>
-  <lastmod>2021-03-16T21:31:12+00:00</lastmod>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.jamiljahan.com/music/</loc>
-  <lastmod>2021-03-16T21:31:12+00:00</lastmod>
+  <loc>https://www.jamiljahan.com/gallery/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.jamiljahan.com/gallery/</loc>
-  <lastmod>2021-03-16T21:31:12+00:00</lastmod>
+  <loc>https://www.jamiljahan.com/music/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.jamiljahan.com/youtube/</loc>
-  <lastmod>2021-03-16T21:31:12+00:00</lastmod>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.jamiljahan.com/store/</loc>
-  <lastmod>2021-03-16T21:31:12+00:00</lastmod>
+  <loc>https://www.jamiljahan.com/shop/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.jamiljahan.com/contact/</loc>
-  <lastmod>2021-03-16T21:31:12+00:00</lastmod>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.jamiljahan.com/store/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.jamiljahan.com/product/promised-neverland/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.jamiljahan.com/product-category/premium-beats/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.jamiljahan.com/product/rezero/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.jamiljahan.com/product-category/uncategorized/</loc>
+  <lastmod>2021-04-10T20:14:18+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
