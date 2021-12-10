@@ -12,12 +12,12 @@
 	<atom:link href="https://www.jamiljahan.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.jamiljahan.com</link>
 	<description>Just another WordPress site</description>
-	<lastBuildDate>Sat, 10 Apr 2021 19:36:11 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 10 Dec 2021 08:43:12 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=5.7</generator>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
 </channel>
 </rss>
