@@ -10082,7 +10082,7 @@ i.ion {
 ## Authorization page
 ---------------------------------*/
 .page-auth {
-  background: #444 url("https://www.jamiljahan..com/wp-content/themes/ohio/images/bg-full.jpg");
+  background: #444 url("https://www.jamiljahan.com/wp-content/themes/ohio/images/bg-full.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center center;
@@ -17328,7 +17328,7 @@ body:not(.dark-scheme) .site-footer .widget_ohio_widget_logo .theme-logo .dark-s
         right: 0;
         top: 0;
         height: 50%;
-        background-image: url("https://www.jamiljahan..com/wp-content/themes/ohio/assets/images/pattern.svg"); }
+        background-image: url("https://www.jamiljahan.com/wp-content/themes/ohio/assets/images/pattern.svg"); }
       .portfolio-item-fullscreen .portfolio-details-video {
         margin-bottom: 3.4vh; }
         .portfolio-item-fullscreen .portfolio-details-video .btn-play {
@@ -17945,7 +17945,7 @@ body:not(.dark-scheme) .site-footer .widget_ohio_widget_logo .theme-logo .dark-s
     top: 0;
     height: 30%;
     opacity: .25;
-    background-image: url(https://www.jamiljahan..com/wp-content/themes/ohio/assets/images/pattern.svg); }
+    background-image: url(https://www.jamiljahan.com/wp-content/themes/ohio/assets/images/pattern.svg); }
   [data-interactive-links-grid] .portfolio-item.active {
     -webkit-transform: scale(2.6);
         -ms-transform: scale(2.6);
