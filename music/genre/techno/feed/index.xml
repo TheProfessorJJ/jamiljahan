@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Techno &#8211; Jamil Jahangir Sheikh</title>
-	<atom:link href="https://www.jamiljahan..com/music/genre/techno/feed/" rel="self" type="application/rss+xml" />
-	<link>https://www.jamiljahan..com/music</link>
+	<atom:link href="https://www.jamiljahan.com/music/genre/techno/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.jamiljahan.com/music</link>
 	<description>Music</description>
 	<lastBuildDate>Sun, 13 Sep 2020 15:37:49 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -21,15 +21,15 @@
 	<generator>https://wordpress.org/?v=5.8.2</generator>
 
 <image>
-	<url>https://www.jamiljahan..com/music/wp-content/uploads/2021/12/cropped-Strangers-1-32x32.jpg</url>
+	<url>https://www.jamiljahan.com/music/wp-content/uploads/2021/12/cropped-Strangers-1-32x32.jpg</url>
 	<title>Techno &#8211; Jamil Jahangir Sheikh</title>
-	<link>https://www.jamiljahan..com/music</link>
+	<link>https://www.jamiljahan.com/music</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
 		<title>Hello Love</title>
-		<link>https://www.jamiljahan..com/music/release/hello-love/</link>
+		<link>https://www.jamiljahan.com/music/release/hello-love/</link>
 		
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<pubDate>Sun, 13 Sep 2020 15:37:49 +0000</pubDate>
@@ -48,7 +48,7 @@ Each track can have unlimited artists, and they are automatically linked to the 
 			</item>
 		<item>
 		<title>Plastic Fantastic</title>
-		<link>https://www.jamiljahan..com/music/release/plastic-fantastic/</link>
+		<link>https://www.jamiljahan.com/music/release/plastic-fantastic/</link>
 		
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<pubDate>Mon, 13 Apr 2020 15:37:46 +0000</pubDate>
@@ -67,7 +67,7 @@ Each track can have unlimited artists, and they are automatically linked to the 
 			</item>
 		<item>
 		<title>Blackside</title>
-		<link>https://www.jamiljahan..com/music/release/blackside/</link>
+		<link>https://www.jamiljahan.com/music/release/blackside/</link>
 		
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<pubDate>Fri, 13 Mar 2020 15:37:45 +0000</pubDate>

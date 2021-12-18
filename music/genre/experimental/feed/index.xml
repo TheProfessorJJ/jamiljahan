@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Experimental &#8211; Jamil Jahangir Sheikh</title>
-	<atom:link href="https://www.jamiljahan..com/music/genre/experimental/feed/" rel="self" type="application/rss+xml" />
-	<link>https://www.jamiljahan..com/music</link>
+	<atom:link href="https://www.jamiljahan.com/music/genre/experimental/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.jamiljahan.com/music</link>
 	<description>Music</description>
 	<lastBuildDate>Sat, 18 Dec 2021 19:48:22 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -21,15 +21,15 @@
 	<generator>https://wordpress.org/?v=5.8.2</generator>
 
 <image>
-	<url>https://www.jamiljahan..com/music/wp-content/uploads/2021/12/cropped-Strangers-1-32x32.jpg</url>
+	<url>https://www.jamiljahan.com/music/wp-content/uploads/2021/12/cropped-Strangers-1-32x32.jpg</url>
 	<title>Experimental &#8211; Jamil Jahangir Sheikh</title>
-	<link>https://www.jamiljahan..com/music</link>
+	<link>https://www.jamiljahan.com/music</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
 		<title>All Songs</title>
-		<link>https://www.jamiljahan..com/music/release/all-songs/</link>
+		<link>https://www.jamiljahan.com/music/release/all-songs/</link>
 		
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<pubDate>Thu, 13 Feb 2020 15:37:46 +0000</pubDate>
