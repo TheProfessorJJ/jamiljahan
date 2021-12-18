@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'QT-Player-Icons';
+  src:  url('https://www.jamiljahan..com/music/wp-content/themes/kentha/fonts/qt-player-icons/fonts/QT-Player-Icons.eot?z5o6i1');
+  src:  url('https://www.jamiljahan..com/music/wp-content/themes/kentha/fonts/qt-player-icons/fonts/QT-Player-Icons.eot?z5o6i1#iefix') format('embedded-opentype'),
+    url('https://www.jamiljahan..com/music/wp-content/themes/kentha/fonts/qt-player-icons/fonts/QT-Player-Icons.ttf?z5o6i1') format('truetype'),
+    url('https://www.jamiljahan..com/music/wp-content/themes/kentha/fonts/qt-player-icons/fonts/QT-Player-Icons.woff?z5o6i1') format('woff'),
+    url('https://www.jamiljahan..com/music/wp-content/themes/kentha/fonts/qt-player-icons/fonts/QT-Player-Icons.svg?z5o6i1#QT-Player-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+#qtmusicplayer .material-icons, #qtmusicplayer-playlist .qtmusicplayer-trackitem .material-icons , .qt-play .material-icons, .qt-playthis .material-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'QT-Player-Icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+    vertical-align: middle;
+  
+}
+#qtmusicplayer .qt-mplayer__controllayer .material-icons {
+transform: scale(1.4);
+}
+.qtplayericons-qtplayer-icons-cart:before {
+  content: "\e900";
+}
+.qtplayericons-qtplayer-icons-download:before {
+  content: "\e901";
+}
+.qtplayericons-qtplayer-icons-next:before {
+  content: "\e902";
+}
+.qtplayericons-qtplayer-icons-pause-circle:before {
+  content: "\e903";
+}
+.qtplayericons-qtplayer-icons-pause:before {
+  content: "\e904";
+}
+.qtplayericons-qtplayer-icons-play-circle:before {
+  content: "\e905";
+}
+.qtplayericons-play_arrow:before {
+  content: "\e906";
+}
+.qtplayericons-qtplayer-icons-playlist:before {
+  content: "\e907";
+}
+.qtplayericons-qtplayer-icons-prev:before {
+  content: "\e908";
+}
+.qtplayericons-qtplayer-icons-vol-high:before {
+  content: "\e909";
+}
+.qtplayericons-qtplayer-icons-vol-low:before {
+  content: "\e90a";
+}
+.qtplayericons-qtplayer-icons-vol-mute:before {
+  content: "\e90b";
+}
+.qtplayericons-qtplayer-icons-vol:before {
+  content: "\e90c";
+}

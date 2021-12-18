@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Experimental &#8211; Jamil Jahangir Sheikh</title>
+	<atom:link href="https://www.jamiljahan..com/music/genre/experimental/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.jamiljahan..com/music</link>
+	<description>Music</description>
+	<lastBuildDate>Sat, 18 Dec 2021 19:48:22 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>https://www.jamiljahan..com/music/wp-content/uploads/2021/12/cropped-Strangers-1-32x32.jpg</url>
+	<title>Experimental &#8211; Jamil Jahangir Sheikh</title>
+	<link>https://www.jamiljahan..com/music</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>All Songs</title>
+		<link>https://www.jamiljahan..com/music/release/all-songs/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 13 Feb 2020 15:37:46 +0000</pubDate>
+				<guid isPermaLink="false">https://qantumthemes.xyz/kentha/demo11/release/fight-this/</guid>
+
+					<description><![CDATA[A 21 years old musician from Bangladesh, striving to get his music heard across the world; From writing to composing and playing instrument then recording, Jamil Jahangir does it all, as a solo artist. With his material like “Dive”, Jamil Jahangir has shown that he can put out a well [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span class="elementor-drop-cap"><span class="elementor-drop-cap-letter">A </span></span>21 years old musician from Bangladesh, striving to get his music heard across the world; From writing to composing and playing instrument then recording, Jamil Jahangir does it all, as a solo artist.</p>
+<p>With his material like “Dive”, Jamil Jahangir has shown that he can put out a well written music that is versatile and captivating.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
