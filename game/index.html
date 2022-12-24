@@ -1,70 +1,31 @@
-!DOCTYPE html
-html
-  head
-    style
-       Style the game elements 
-      #game {
-        width 500px;
-        height 300px;
-        border 1px solid black;
-        position relative;
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Style the button and score counter */
+      button {
+        font-size: 24px;
+        padding: 10px;
       }
-      #paddle-left {
-        width 20px;
-        height 100px;
-        background-color black;
-        position absolute;
-        top 50%;
-        left 0;
-        transform translateY(-50%);
+      #score {
+        font-size: 24px;
       }
-      #paddle-right {
-        width 20px;
-        height 100px;
-        background-color black;
-        position absolute;
-        top 50%;
-        right 0;
-        transform translateY(-50%);
-      }
-      #ball {
-        width 20px;
-        height 20px;
-        background-color red;
-        border-radius 50%;
-        position absolute;
-        top 50%;
-        left 50%;
-        transform translate(-50%, -50%);
-      }
-    style
-  head
-  body
-    !-- Create the game elements --
-    div id=game
-      div id=paddle-leftdiv
-      div id=paddle-rightdiv
-      div id=balldiv
-    div
+    </style>
+  </head>
+  <body>
+    <!-- Create the button and score counter -->
+    <button id="button">Click me!</button>
+    <div id="score">0</div>
 
-    script
-       Set up variables for the game
-      const game = document.getElementById(game);
-      const paddleLeft = document.getElementById(paddle-left);
-      const paddleRight = document.getElementById(paddle-right);
-      const ball = document.getElementById(ball);
-      let ballSpeedX = 5;
-      let ballSpeedY = 5;
+    <script>
+      // Set up a click event listener for the button
+      const button = document.getElementById("button");
+      button.addEventListener("click", function() {
+        // Increase the score when the button is clicked
+        const score = document.getElementById("score");
+        score.innerHTML = parseInt(score.innerHTML) + 1;
+      });
+    </script>
+  </body>
+</html>
 
-       Function to move the ball
-      function moveBall() {
-         Update the ball's position
-        ball.style.left = (ball.offsetLeft + ballSpeedX) + px;
-        ball.style.top = (ball.offsetTop + ballSpeedY) + px;
-
-         Check if the ball has hit the top or bottom of the game area
-        if (ball.offsetTop = 0  ball.offsetTop + ball.offsetHeight = game.offsetHeight) {
-          ballSpeedY = -ballSpeedY;
-        }
-
-         Check if the ball has hit a paddle
