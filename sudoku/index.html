@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Sudoku</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      grid-gap: 2px;
+    }
+    .cell {
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+    }
+    .fixed {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sudoku</h1>
+  <div class="grid">
+    <!-- Cells are generated using JavaScript -->
+  </div>
+  <script>
+    // Generates the Sudoku grid with fixed and editable cells
+    function generateGrid() {
+      var grid = document.querySelector('.grid');
+      for (var i = 0; i < 81; i++) {
+        var cell = document.createElement('div');
+        cell.classList.add('cell');
+        // Randomly set some cells as fixed
+        if (Math.random() < 0.3) {
+          cell.classList.add('fixed');
+          cell.innerHTML = Math.floor(Math.random() * 9) + 1;
+        }
+        grid.appendChild(cell);
+      }
+    }
+    
+    generateGrid();
+  </script>
+</body>
+</html>
