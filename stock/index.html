@@ -25,74 +25,116 @@
 <body>
   <h1>Efficient Frontier Calculator</h1>
   <form>
-    <label for="num_stocks">Number of Stocks:</label><br>
-    <input type="text" id="num_stocks" name="num_stocks"><br>
-    <label for="mean_returns">Mean Returns:</label><br>
-    <input type="text" id="mean_returns" name="mean_returns"><br>
-    <label for="variances">Variances:</label><br>
-    <input type="text" id="variances" name="variances"><br>
+    <label for="variance1">Variance 1:</label><br>
+    <input type="text" id="variance1" name="variance1"><br>
+    <label for="stddev1">Standard Deviation 1:</label><br>
+    <input type="text" id="stddev1" name="stddev1"><br>
+    <label for="return1">Return 1:</label><br>
+    <input type="text" id="return1" name="return1"><br>
     <br>
-    <input type="submit" value="Submit">
-  </form> 
+    <label for="variance2">Variance 2:</label><br>
+    <input type="text" id="variance2" name="variance2"><br>
+    <label for="stddev2">Standard Deviation 2:</label><br>
+    <input type="text" id="stddev2" name="stddev2"><br>
+    <label for="return2">Return 2:</label><br>
+    <input type="text" id="return2" name="return2"><br>
+    <br>
+    <label for="variance3">Variance 3:</label><br>
+    <input type="text" id="variance3" name="variance3"><br>
+    <label for="stddev3">Standard Deviation 3:</label><br>
+    <input type="text" id="stddev3" name="stddev3"><br>
+    <label for="return3">Return 3:</label><br>
+    <input type="text" id="return3" name="return3"><br>
+   
+    <br>
+    <label for="variance4">Variance 4:</label><br>
+    <input type="text" id="variance4" name="variance4"><br>
+    <label for="stddev4">Standard Deviation 4:</label><br>
+    <input type="text" id="stddev4" name="stddev4"><br>
+    <label for="return4">Return 4:</label><br>
+    <input type="text" id="return4" name="return4"><br>
+    <br>
+    <label for="variance5">Variance 5:</label><br>
+    <input type="text" id="variance5" name="variance5"><br>
+    <label for="stddev5">Standard Deviation 5:</label><br>
+    <input type="text" id="stddev5" name="stddev5"><br>
+    <label for="return5">Return 5:</label><br>
+    <input type="text" id="return5" name="return5"><br>
+    <br>
+    <input type="submit" value="Generate Efficient Frontier">
+  </form>
   <div id="chart"></div>
   <script>
-    // Parses the user input and returns an array of data points
+    // Parses the user's input and returns an array of data points
     function parseInput() {
-      var numStocks = document.getElementById('num_stocks').value;
-      var meanReturns = document.getElementById('mean_returns').value.split(',').map(Number);
-      var variances = document.getElementById('variances').value.split(',').map(Number);
-      var data = [];
-      for (var i = 0; i < numStocks; i++) {
-        var meanReturn = meanReturns[i];
-        var variance = variances[i];
-        data.push({
-          mean: meanReturn,
-          variance: variance
-        });
-      }
-      return data;
-    }
-    
-    // Generates the efficient frontier based on the given data points
-    function generateEfficientFrontier(data) {
-      var xScale = d3.scaleLinear()
-                     .domain([0, d3.max(data, d => d.variance)])
-                     .range([0, 500]);
-      var yScale = d3.scaleLinear()
-                     .domain([0, d3.max(data, d => d.mean)])
-                     .range([500, 0]);
-      var svg = d3.select('#chart')
-                  .append('svg')
-                  .attr('width', 500)
-                  .attr('height', 500);
-      svg.selectAll('.dot')
-         .data(data)
-         .enter()
-         .append('circle')
-         .attr('class', 'dot')
-         .attr('cx', d => xScale(d.variance))
-         .attr('cy', d => yScale(d.mean))
-         .attr('r', 3);
-      var xAxis = d3.axisBottom(xScale);
-      var yAxis = d3.axisLeft(yScale);
-      svg.append('g')
-         .attr('class', 'axis')
-         .attr('transform', 'translate(0,500)')
-         .call(xAxis);
-      svg.append('g')
-         .attr('class', 'axis')
-         .attr('transform', 'translate(0,0)')
-         .call(yAxis);
-    }
-    
-    // Handles the form submission and generates the efficient frontier
-    var form = document.querySelector('form');
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      var data = parseInput();
-      generateEfficientFrontier(data);
-    });
+      var variance1 = parseFloat(document.querySelector('#variance1').value);
+      var stddev1 = parseFloat(document.querySelector('#stddev1').value);
+      var return1 = parseFloat(document.querySelector('#return1').value);
+      var variance2 = parseFloat(document.querySelector('#variance2').value);
+      var stddev2 = parseFloat(document.querySelector('#stddev2').value);
+      var return2 = parseFloat(document.querySelector('#return2').value);
+      var variance3 = parseFloat(document.querySelector('#variance3').value);
+      var stddev3 = parseFloat(document.querySelector('#stddev3').value);
+      var return3 = parseFloat(document.querySelector('#return3').value);
+      var variance4 = parseFloat(document.querySelector('#variance4').value);
+      var stddev4 = parseFloat(document.querySelector('#stddev4').value);
+      var return4 = parseFloat(document.querySelector('#return4').value);
+      var variance5 = parseFloat(document.querySelector('#variance5').value);
+      var stddev5 = parseFloat(document.querySelector('#stddev5').value);
+      var return5 = parseFloat
+    // Set up the SVG element and dimensions
+    var svgWidth = 500;
+    var svgHeight = 500;
+    var margin = { top: 50, right: 50, bottom: 50, left: 50 };
+    var width = svgWidth - margin.left - margin.right;
+    var height = svgHeight - margin.top - margin.bottom;
+    var svg = d3.select("#chart")
+      .append("svg")
+      .attr("width", svgWidth)
+      .attr("height", svgHeight);
+    var chart = svg.append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // Set up the scales for the axes
+    var xScale = d3.scaleLinear()
+      .range([0, width]);
+    var yScale = d3.scaleLinear()
+      .range([height, 0]);
+
+    // Set up the axes
+    var xAxis = d3.axisBottom(xScale)
+      .ticks(5);
+    var yAxis = d3.axisLeft(yScale)
+      .ticks(5);
+
+    // Add the axes to the chart
+    chart.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+    chart.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+
+    // Add the title to the chart
+    chart.append("text")
+      .attr("x", (width / 2))
+      .attr("y", 0 - (margin.top / 2))
+      .attr("text-anchor", "middle")
+      .style("font-size", "16px")
+      .text("Efficient Frontier");
+
+    // Set up the data points and draw the scatter plot
+    var data = parseInput();
+    xScale.domain(d3.extent(data, function(d) { return d.stddev; }));
+    yScale.domain(d3.extent(data, function(d) { return d.return; }));
+    chart.selectAll(".dot")
+      .data(data)
+      .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 5)
+      .attr("cx", function(d) { return xScale(d.stddev); })
+      .attr("cy", function(d) { return yScale(d.return); });
   </script>
 </body>
 </html>
-                             
