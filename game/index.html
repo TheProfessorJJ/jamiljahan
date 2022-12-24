@@ -2,29 +2,146 @@
 <html>
   <head>
     <style>
-      /* Style the button and score counter */
-      button {
-        font-size: 24px;
-        padding: 10px;
+      /* Style the game elements */
+      #game {
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        position: relative;
       }
-      #score {
-        font-size: 24px;
+      .enemy {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+      }
+      #player {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #bullet {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
       }
     </style>
   </head>
   <body>
-    <!-- Create the button and score counter -->
-    <button id="button">Click me!</button>
-    <div id="score">0</div>
+    <!-- Create the game elements -->
+    <div id="game">
+      <!-- Generate 5 enemy elements -->
+      <div class="enemy" style="top: 10px; left: 10px;"></div>
+      <div class="enemy" style="top: 10px; left: 70px;"></div>
+      <div class="enemy" style="top: 10px; left: 130px;"></div>
+      <div class="enemy" style="top: 10px; left: 190px;"></div>
+      <div class="enemy" style="top: 10px; left: 250px;"></div>
+          <!-- Create the player element -->
+      <div id="player"></div>
+      <!-- Create the bullet element (hidden by default) -->
+      <div id="bullet" style="display: none;"></div>
+    </div>
 
     <script>
-      // Set up a click event listener for the button
-      const button = document.getElementById("button");
-      button.addEventListener("click", function() {
-        // Increase the score when the button is clicked
-        const score = document.getElementById("score");
-        score.innerHTML = parseInt(score.innerHTML) + 1;
-      });
+      // Set up variables for the game
+      const game = document.getElementById("game");
+      const enemies = document.getElementsByClassName("enemy");
+      const player = document.getElementById("player");
+      const bullet = document.getElementById("bullet");
+      let playerSpeed = 5; // pixels per frame
+      let bulletSpeed = 10; // pixels per frame
+      let enemiesKilled = 0; // number of enemies killed
+      let enemySpeed = 1; // pixels per frame
+      let enemyDirection = 1; // direction of enemy movement (1 = right, -1 = left)
+      let shooting = false; // flag to track if the player is shooting
+
+      // Function to move the player
+      function movePlayer(event) {
+        // Check if the left or right arrow key is pressed
+        if (event.code === "ArrowLeft") {
+          // Move the player to the left
+          player.style.left = Math.max(0, player.offsetLeft - playerSpeed) + "px";
+        } else if (event.code === "ArrowRight") {
+          // Move the player to the right
+          player.style.left = Math.min(game.offsetWidth - player.offsetWidth, player.offsetLeft + playerSpeed) + "px";
+        }
+      }
+
+      // Function to move the enemies
+      // Function to move the enemies
+      function moveEnemies() {
+        // Loop through all the enemies
+        for (const enemy of enemies) {
+          // Move the enemy horizontally
+          enemy.style.left = (enemy.offsetLeft + enemyDirection) + "px";
+          // Check if the enemy has reached the edge of the game area
+          if (enemy.offsetLeft + enemy.offsetWidth >= game.offsetWidth || enemy.offsetLeft <= 0) {
+            // Reverse the direction of the enemy movement
+            enemyDirection *= -1;
+            // Move the enemy down
+            enemy.style.top = (enemy.offsetTop + enemySpeed) + "px";
+          }
+        }
+      }
+
+      // Function to move the bullet
+      function moveBullet() {
+        // Check if the bullet is visible
+        if (bullet.style.display !== "none") {
+          // Move the bullet up
+          bullet.style.top = (bullet.offsetTop - bulletSpeed) + "px";
+          // Check if the bullet has reached the top of the game area
+          if (bullet.offsetTop <= 0) {
+            // Hide the bullet
+            bullet.style.display = "none";
+            shooting = false;
+          }
+        }
+      }
+
+      // Function to check if the bullet has hit an enemy
+      function checkCollision() {
+        // Loop through all the enemies
+        for (const enemy of enemies) {
+          // Check if the bullet is within the bounds of the enemy
+          if (bullet.offsetLeft >= enemy.offsetLeft && bullet.offsetLeft <= enemy.offsetLeft + enemy.offsetWidth &&
+              bullet.offsetTop <= enemy.offsetTop + enemy.offsetHeight && bullet.offsetTop >= enemy.offsetTop) {
+            // Hide the enemy and bullet
+            enemy.style.display = "none";
+            bullet.style.display = "none";
+            shooting = false;
+            // Increment the enemies killed counter
+            enemiesKilled++;
+            // Check if all enemies have been killed
+            if (enemiesKilled === enemies.length) {
+              // End the game
+              alert("You won!");
+              document.removeEventListener("keydown", movePlayer);
+              return;
+            }
+          }
+        }
+      }
+
+      // Set up event listeners for player movement
+      document.addEventListener("keydown", movePlayer);
+      // Set up the game loop
+      setInterval(function() {
+        moveEnemies();
+        moveBullet();
+        checkCollision();
+      }, 1000 / 60); // 60 frames per second
     </script>
   </body>
 </html>
