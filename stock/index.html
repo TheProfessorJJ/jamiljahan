@@ -39,12 +39,10 @@
     // Parses the user input and returns an array of data points
     function parseInput() {
       var numStocks = document.getElementById('num_stocks').value;
-      var meanReturns = document.getElementById('mean_returns').value;
-      var variances = document.getElementById('variances').value;
+      var meanReturns = document.getElementById('mean_returns').value.split(',').map(Number);
+      var variances = document.getElementById('variances').value.split(',').map(Number);
       var data = [];
-      for (var i = 0; i < num
-
- Stocks; i++) {
+      for (var i = 0; i < numStocks; i++) {
         var meanReturn = meanReturns[i];
         var variance = variances[i];
         data.push({
@@ -97,4 +95,4 @@
   </script>
 </body>
 </html>
-      
+                             
