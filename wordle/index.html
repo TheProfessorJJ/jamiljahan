@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Style the game elements */
+      #game {
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        text-align: center;
+        font-size: 24px;
+      }
+      #clues {
+        margin: 10px 0;
+      }
+      #guess {
+        width: 150px;
+        height: 30px;
+        font-size: 24px;
+      }
+      #submit {
+        width: 75px;
+        height: 30px;
+        font-size: 18px;
+      }
+      #result {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create the game elements -->
+    <div id="game">
+      <!-- Display the clues -->
+      <div id="clues">
+        Clues: <span id="clue1"></span>, <span id="clue2"></span>, <span id="clue3"></span>
+      </div>
+      <!-- Create the form for guessing the word -->
+      <form>
+        <input type="text" id="guess" placeholder="Enter your guess">
+        <button type="submit" id="submit">Guess</button>
+      </form>
+      <!-- Display the result of the guess -->
+      <div id="result"></div>
+    </div>
+
+    <script>
+      // Set up variables for the game
+      const game = document.getElementById("game");
+      const clues = document.getElementsByTagName("span");
+      const guessInput = document.getElementById("guess");
+      const submitButton = document.getElementById("submit");
+      const result = document.getElementById("result");
+      const words = ["apple", "banana", "orange", "grape", "strawberry"];
+      let currentWord = "";
+      let cluesGiven = 0;
+
+      // Function to start a new game
+      function newGame() {
+        // Choose a random word from the list
+        currentWord = words[Math.floor(Math.random() * words.length)];
+        // Reset the clues and result
+        cluesGiven = 0;
+        for (const clue of clues) {
+          clue.textContent = "";
+        }
+        result.textContent = "";
+        // Clear the guess input
+        guess
